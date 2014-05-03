@@ -5,6 +5,7 @@
 \graphicspath{ {images/} }
 
 
+
 \begin{document}
 
 
@@ -42,15 +43,17 @@ novel clustering algorithm, MSTkNN, propose by (reference). The MSTkNN combines
 a Minimum Spanning Tree (MST) and a k-Nearest Neighbor (kNN) proximity graphs.
 This combination allows us to perform a graph partitioning operation, which
 produce a clustering of the dataset represented by its graph. The graph
-partitioning organize the data in groups with similar caractheristics according
+partitioning organize the data in groups with similar characteristics according
 to a given proximity measurement. In this case, the Spearman correlation was
 used to measure the distance between different features of the dataset's graph.
 Furthermore, the value of k was defined as 3 on the kNN graph computation. 
 
+%Normalization by row???
+
 %write a fw sentences about MST
 %write a few sentences about kNN
 
-After clustering the dataset, the CM1 score introduced by (shakespeare) was
+After clustering the dataset, the new score introduced by (shakespeare) was
 computed to highlight the individual characteristics of each cluster. The CM1
 scores gives a overview about differences in averages for each feature from a
 specific cluster in the investigated dataset. The rank of the CM1 scores of a
@@ -75,9 +78,12 @@ The MSTkNN clustering algorithm was able to find 7 different clusters of
 different sizes. These included Cluster0 (13\%), Cluster1 (10\%), Cluster2
 (12\%), Cluster3 (20\%), Cluster4 (3\%), Cluster5(36\%) and Cluster6 (6\%).
 
-The CM1 score was calculated for all the 43 questions of the dataset
-of the clustering step for each cluster. The top and bottom features
-selected for each cluster is presented in the Tables().
+The CM1 score was calculated for all the 43 questions of the new dataset
+for each of the 7 different clusters. The selected top and bottom features  
+for each cluster is presented in the Tables().
+
+The figure ??? demonstrate the CM1 score for the 43 questions for the Cluster0,
+with the selected 12 lowest and 13 highest ranked questions shown in red and green respectively. The difference between the cumulative CM1 socores for Cluster 0 is shown in the figure ??? 
 
 
 \subsubsection{Description of Clusters}
@@ -85,9 +91,9 @@ selected for each cluster is presented in the Tables().
 In order to further describe the clusters found by our method, we compute a new
 score proposed by(), the CM1 score.
 
-%\begin{figure}[h]
-%\includegraphics[ width=\textwidth ]{.png}
-%\end{figure}
+\begin{figure}[h]
+\includegraphics[ width=\textwidth ]{CM1_Cluster0.png}
+\end{figure}
 
 
 %few sentences on what CM_1 score is
