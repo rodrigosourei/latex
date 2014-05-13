@@ -30,13 +30,13 @@ Specifically, the survey was divided into 5 sections: Awareness and Involvement
 in Charities, Trust, Regulation, Public Register of Charities and Demographics.
 
 Aiming to cluster the survey respondents according their trust and confidence in
-charities, a new dataset was obtained from the original dataset. It
-consists of the Trust section responses which were rated on the scale from 1 to
-10. In addition, the questions not answered by all the respondents and those
-with user-typed responses were removed. Overall, 1,562 responses of 43
-different questions was considered in the clustering step. Nevertheless, the
-original dataset with all responses is essential in the analysis of the
-resulting clusters.
+charities, a new dataset was obtained from the original dataset. It consists of
+the Trust section responses which were rated on the scale from 1 to 10. In
+addition, the questions not answered by all the respondents and those with
+user-typed responses were removed. Overall, 1,562 responses of 43 different
+questions was considered in the clustering step. Nevertheless, the original
+dataset with all responses is essential in the analysis of the resulting
+clusters.
 
 Given the new dataset, the methodology utilised for clustering is based on a
 novel clustering algorithm, MSTkNN, propose by (reference). The MSTkNN combines
@@ -75,19 +75,21 @@ For further clarification of this method, we refer to (reference).
 \subsection{Results}
 
 The MSTkNN clustering algorithm was able to find 7 different clusters of
-different sizes. These included Cluster0 (13\%), Cluster1 (10\%), Cluster2
-(12\%), Cluster3 (20\%), Cluster4 (3\%), Cluster5(36\%) and Cluster6 (6\%).
+different sizes according Figure \ref{fig:Clusters}. These included Cluster0
+(13\%), Cluster1 (10\%), Cluster2 (12\%), Cluster3 (20\%), Cluster4 (3\%),
+Cluster5(36\%) and Cluster6 (6\%).
 
 
 \begin{figure}[h]
 	\includegraphics[ width=\textwidth ]{Clusters.png}
-	\caption{\textbf{Clusters} The MSTkNN.}
+	\caption{\textbf{Percentage of respondents for each cluster discovered by the
+	MSTkNN clustering algorithm} The MSTkNN.}
 	\label{fig:Clusters}
 \end{figure}
 
 The CM1 score was calculated for all the 43 questions of the new dataset
-for each of the 7 different clusters. The selected top and bottom features  
-for each cluster is presented in the Tables().
+for each of the discovered clusters. The selected top and bottom features for
+each cluster is presented in the Tables().
 
 \begin{figure}[h]
 	\includegraphics[ width=\textwidth ]{CM1_Cluster0.png}
@@ -97,7 +99,14 @@ for each cluster is presented in the Tables().
 	\label{fig:Cluster0}
 \end{figure}
 
-The figure ~\ref{fig:Cluster0} demonstrate the CM1 score for the 43
+\begin{figure}[h]
+	\includegraphics[ width=\textwidth]{Difference_Cluster0.png}
+	\caption{\textbf{Difference between the cumulative CM1 scores for Cluster0's 12
+	lowest and 13 highest scoring questions} The.}
+	\label{fig:Differences}
+\end{figure}
+
+The Figure \ref{fig:Cluster0} demonstrate the CM1 score for the 43
 questions for the Cluster0, with the selected 12 lowest and 13 highest ranked
 questions shown in red and green respectively. The difference between the
 cumulative CM1 socores for Cluster 0 is shown in the figure ???
@@ -115,7 +124,7 @@ cumulative CM1 socores for Cluster 0 is shown in the figure ???
 	\includegraphics[ width=\textwidth ]{CM1_Cluster2.png}
 	\caption{\textbf{CM1 Scores for the 43 questions for Cluster2, based on the
 	clustering dataset.} The selected top and bottom questions are shown in red
-	and green respectevly.}
+	and green respectively.}
 	\label{fig:Cluster2}
 \end{figure}
 
@@ -123,7 +132,7 @@ cumulative CM1 socores for Cluster 0 is shown in the figure ???
 	\includegraphics[ width=\textwidth ]{CM1_Cluster3.png}
 	\caption{\textbf{CM1 Scores for the 43 questions for Cluster3, based on the
 	clustering dataset.} The selected top and bottom questions are shown in red
-	and green respectevly.}
+	and green respectively.}
 	\label{fig:Cluster3}
 \end{figure}
 
@@ -131,7 +140,7 @@ cumulative CM1 socores for Cluster 0 is shown in the figure ???
 	\includegraphics[ width=\textwidth ]{CM1_Cluster4.png}
 	\caption{\textbf{CM1 Scores for the 43 questions for Cluster4, based on the
 	clustering dataset.} The selected top and bottom questions are shown in red
-	and green respectevly.}
+	and green respectively.}
 	\label{fig:Cluster4}
 \end{figure}
 
@@ -139,7 +148,7 @@ cumulative CM1 socores for Cluster 0 is shown in the figure ???
 	\includegraphics[ width=\textwidth ]{CM1_Cluster5.png}
 	\caption{\textbf{CM1 Scores for the 43 questions for Cluster5, based on the
 	clustering dataset.} The selected top and bottom questions are shown in red
-	and green respectevly.}
+	and green respectively.}
 	\label{fig:Cluster5}
 \end{figure}
 
@@ -180,6 +189,4 @@ score proposed by(), the CM1 score.
 %(together)
 
 \end{document}
-
-T‡ funfando? esta ou nao??
 
