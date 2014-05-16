@@ -19,6 +19,7 @@
 
 \subsection{Materials and Methods}
 
+
 The original dataset utilised in this study consists in 1,562 responses from a
 quantitative survey conducted on behalf of the ACNC by ChantLink in 2013. It
 does not include a pilot phase of 62 responses. The survey collected information
@@ -34,21 +35,30 @@ charities, a new dataset was obtained from the original dataset. It consists of
 the Trust section responses which were rated on the scale from 1 to 10. In
 addition, the questions not answered by all the respondents and those with
 user-typed responses were removed. Overall, 1,562 responses of 43 different
-questions was considered in the clustering step. Nevertheless, the original
-dataset with all responses is essential in the analysis of the resulting
-clusters.
+questions was considered in the clustering step. These procedure was adopted in
+order to select informative and comparable questions as the survey contains
+different types.
 
-Given the new dataset, the methodology utilised for clustering is based on a
-novel clustering algorithm, MSTkNN, propose by (reference). The MSTkNN combines
-a Minimum Spanning Tree (MST) and a k-Nearest Neighbor (kNN) proximity graphs.
-This combination allows us to perform a graph partitioning operation, which
-produce a clustering of the dataset represented by its graph. The graph
-partitioning organize the data in groups with similar characteristics according
-to a given proximity measurement. In this case, the Spearman correlation was
-used to measure the distance between different features of the dataset's graph.
-Furthermore, the value of k was defined as 3 on the kNN graph computation. 
+Since the dataset can be represented as a graph, the methodology utilised for
+clustering is based on a novel graph-based clustering algorithm propose by
+(reference). The MSTkNN combines a Minimum Spanning Tree (MST) and a k-Nearest
+Neighbor (kNN) proximity graphs. This combination allows us to perform a graph
+partitioning operation, which produce a clustering of the dataset represented by
+its graph. The graph partitioning organize the data in groups with similar
+characteristics according to a given proximity measurement. In this case, the
+Spearman correlation was used to measure the distance between different features
+of the dataset's graph.
 
-%Normalization by row???
+Given a undirected and connected graph, a MST is a subgraph which is a tree and
+contain all the objects connected by the minimum possible distance between each
+other, based on a determined measurement of the distance. Whereas, the kNN graph
+is a graph where their objects are connected if they are commutual k nearest
+neighbors of each other according to a defined value of k. In this work, the
+value of k was defined as 3 for computing the kNN graph. The merge of these
+methods permit delete the connection between two objects in the MST if they are
+not reciprocally one of the k nearest of each other. Consequently, the MST is
+partitioned into smaller subgraphs which are the resulting clusters.
+%Normalization by row and K=3???
 
 %write a fw sentences about MST
 %write a few sentences about kNN
