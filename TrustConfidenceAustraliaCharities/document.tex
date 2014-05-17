@@ -44,8 +44,8 @@ clustering is based on a novel graph-based clustering algorithm propose by
 (reference). The MSTkNN combines a Minimum Spanning Tree (MST) and a k-Nearest
 Neighbor (kNN) proximity graphs. This combination allows us to perform a graph
 partitioning operation, which produce a clustering of the dataset represented by
-its graph. The graph partitioning organize the data in groups with similar
-characteristics according to a given proximity measurement. In this case, the
+its graph. The graph partitioning separates the data in groups with similar
+characteristics utilizing a given proximity measurement. In this case, the
 Spearman correlation was used to measure the distance between different features
 of the dataset's graph.
 
@@ -57,8 +57,9 @@ neighbors of each other according to a defined value of k. In this work, the
 value of k was defined as 3 for computing the kNN graph. The merge of these
 methods permit delete the connection between two objects in the MST if they are
 not reciprocally one of the k nearest of each other. Consequently, the MST is
-partitioned into smaller subgraphs which are the resulting clusters.
-%Normalization by row and K=3???
+partitioned into smaller subgraphs which are the resultant clusters.
+
+%Normalization by row?
 
 %write a fw sentences about MST
 %write a few sentences about kNN
